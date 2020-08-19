@@ -1,0 +1,24 @@
+{
+  "name": "snowflake-ui",
+  "version": "0.0.1",
+  "description": "A UI library, built with Vue.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReformedCola/snowflake-ui.git"
+  },
+  "keywords": [
+    "Vue",
+    "UI",
+    "Components"
+  ],
+  "author": "Zhiyuan He",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ReformedCola/snowflake-ui/issues"
+  },
+  "homepage": "https://github.com/ReformedCola/snowflake-ui#readme"
+}
