@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/ReformedCola/snowflake-ui/issues"
   },
-  "homepage": "https://github.com/ReformedCola/snowflake-ui#readme"
+  "homepage": "https://github.com/ReformedCola/snowflake-ui#readme",
+  "dependencies": {
+    "vue": "^2.6.11"
+  }
 }
