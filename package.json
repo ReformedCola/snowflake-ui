@@ -23,5 +23,8 @@
   "homepage": "https://github.com/ReformedCola/snowflake-ui#readme",
   "dependencies": {
     "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
   }
 }
