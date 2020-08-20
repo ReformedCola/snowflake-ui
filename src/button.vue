@@ -41,7 +41,7 @@
     font-size: var(--font-size);
     height: var(--button-height);
     padding: 0 0.6em;
-    border-radius: var(--button-radius);
+    border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
     background: var(--button-bg);
     display: inline-flex;
@@ -50,7 +50,7 @@
     vertical-align: middle;
 
     &:hover {
-      border-color: var(--boarder-color-hover);
+      border-color: var(--border-color-hover);
     }
 
     &:active {

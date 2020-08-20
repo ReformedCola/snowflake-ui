@@ -18,10 +18,10 @@
       --font-size: 14px;
       --button-bg: white;
       --button-active-bg: #eee;
-      --button-radius: 4px;
+      --border-radius: 4px;
       --color: #333;
       --border-color: #999;
-      --boarder-color-hover: #666;
+      --border-color-hover: #666;
     }
 
     #app {
@@ -47,6 +47,11 @@
     <g-button :loading="loading1" @click="loading1 = !loading1">
       Button
     </g-button>
+    <g-button-group>
+      <g-button icon="left">Last Page</g-button>
+      <g-button>More</g-button>
+      <g-button icon="right" icon-position="right">Next Page</g-button>
+    </g-button-group>
   </div>
   <script src="./src/app.js"></script>
   <script src="//at.alicdn.com/t/font_2017036_1k2552hjm72.js"></script>
