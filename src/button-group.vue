@@ -4,7 +4,16 @@
   </div>
 </template>
 <script>
-
+  export default {
+    mounted() {
+      for (let node of this.$el.children) {
+        let name = node.nodeName.toLowerCase()
+        if (name !== 'button') {
+          console.warn(`All child elements of g-button-group should be g-button, but you used ${name}`)
+        }
+      }
+    }
+  }
 </script>
 <style lang="scss">
   .g-button-group {
@@ -14,14 +23,17 @@
     > .g-button {
       border-radius: 0;
       margin-left: -1px;
+
       &:first-child {
         border-top-left-radius: var(--border-radius);
         border-bottom-left-radius: var(--border-radius);
       }
+
       &:last-child {
         border-top-right-radius: var(--border-radius);
         border-bottom-right-radius: var(--border-radius);
       }
+
       &:hover {
         position: relative;
         z-index: 1;
