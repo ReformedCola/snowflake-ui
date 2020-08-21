@@ -24,6 +24,7 @@ chai.use(spies)
 
 // Unit Test
 {
+  // Case 1: button could have icon
   const Constructor = Vue.extend(Button)
   const vm = new Constructor({
     propsData: {
@@ -38,6 +39,7 @@ chai.use(spies)
   vm.$destroy()
 }
 {
+  // Case 2: icon should be loading instead of settings
   const Constructor = Vue.extend(Button)
   const vm = new Constructor({
     propsData: {
@@ -53,6 +55,7 @@ chai.use(spies)
   vm.$destroy()
 }
 {
+  // Case 3: order of left icon should be 1
   const div = document.createElement('div')
   document.body.appendChild(div)
   const Constructor = Vue.extend(Button)
@@ -69,6 +72,7 @@ chai.use(spies)
   vm.$destroy()
 }
 {
+  // Case 4: order of right icon should be 2
   const div = document.createElement('div')
   document.body.appendChild(div)
   const Constructor = Vue.extend(Button)
@@ -88,6 +92,7 @@ chai.use(spies)
 
 // mock
 {
+  // Case 5: onclick event should trigger callback function
   const Constructor = Vue.extend(Button)
   const vm = new Constructor({
     propsData: {
