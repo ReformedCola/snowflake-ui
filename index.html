@@ -32,26 +32,41 @@
       font-size: var(--font-size);
     }
   </style>
+  <style>
+    .box {
+      margin: 20px;
+    }
+  </style>
 </head>
 <body>
   <div id="app">
-    <g-button>
-      Button
-    </g-button>
-    <g-button icon="settings" :loading="loading2" @click="loading2 = !loading2">
-      Button
-    </g-button>
-    <g-button icon="settings" icon-position="right" :loading="loading3" @click="loading3 = !loading3">
-      Button
-    </g-button>
-    <g-button :loading="loading1" @click="loading1 = !loading1">
-      Button
-    </g-button>
-    <g-button-group>
-      <g-button icon="left">Last Page</g-button>
-      <g-button>More</g-button>
-      <g-button icon="right" icon-position="right">Next Page</g-button>
-    </g-button-group>
+    <div class="box">
+      <g-input value="Sarah"></g-input>
+      <g-input value="Disabled" disabled></g-input>
+      <g-input value="Read Only" readonly></g-input>
+    </div>
+    <div class="box">
+      <g-input value="A" error="Last name could not be less than 2 characters"></g-input>
+    </div>
+    <div class="box">
+      <g-button>
+        Button
+      </g-button>
+      <g-button icon="settings" :loading="loading2" @click="loading2 = !loading2">
+        Button
+      </g-button>
+      <g-button icon="settings" icon-position="right" :loading="loading3" @click="loading3 = !loading3">
+        Button
+      </g-button>
+      <g-button :loading="loading1" @click="loading1 = !loading1">
+        Button
+      </g-button>
+      <g-button-group>
+        <g-button icon="left">Last Page</g-button>
+        <g-button>More</g-button>
+        <g-button icon="right" icon-position="right">Next Page</g-button>
+      </g-button-group>
+    </div>
   </div>
   <script src="./src/app.js"></script>
 </body>
