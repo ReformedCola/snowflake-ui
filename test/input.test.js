@@ -18,11 +18,11 @@ describe('Input', () => {
       const Constructor = Vue.extend(Input)
       const vm = new Constructor({
         propsData: {
-          value: '1122'
+          value: '1234'
         }
       }).$mount()
       const inputElement = vm.$el.querySelector('input')
-      expect(inputElement.value).to.equal('1122')
+      expect(inputElement.value).to.equal('1234')
       vm.$destroy()
     })
 
@@ -67,7 +67,7 @@ describe('Input', () => {
 
   describe('events', () => {
     it('supports change event', () => {
-
+      // events test
     })
   })
 })
