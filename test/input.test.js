@@ -1,5 +1,3 @@
-import Button from '../src/button'
-
 const expect = chai.expect
 import Vue from 'vue'
 import Input from '../src/input'
@@ -67,7 +65,6 @@ describe('Input', () => {
 
   describe('events', () => {
     it('supports change event', () => {
-      // events test
     })
   })
 })
