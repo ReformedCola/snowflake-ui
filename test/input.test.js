@@ -63,7 +63,7 @@ describe('Input', () => {
     })
   })
 
-  describe('Events', () => {
+  describe('events', () => {
     it('supports change event', () => {
     })
   })
