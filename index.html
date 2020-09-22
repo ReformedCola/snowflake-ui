@@ -52,6 +52,11 @@
       <g-input value="A" @change="inputChange"></g-input>
     </div>
     <div class="box">
+      <g-input v-model="message"></g-input>
+      <p>{{message}}</p>
+      <button @click="message += 1">+1</button>
+    </div>
+    <div class="box">
       <g-button>
         Button
       </g-button>
