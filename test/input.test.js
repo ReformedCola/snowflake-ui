@@ -12,9 +12,13 @@ describe('Input', () => {
   })
 
   describe('props', () => {
+    const Constructor = Vue.extend(Input)
+    let vm
+    afterEach(() => {
+      vm.$destroy()
+    })
     it('could accept value', () => {
-      const Constructor = Vue.extend(Input)
-      const vm = new Constructor({
+      vm = new Constructor({
         propsData: {
           value: '1234'
         }
@@ -25,8 +29,7 @@ describe('Input', () => {
     })
 
     it('could accept disabled', () => {
-      const Constructor = Vue.extend(Input)
-      const vm = new Constructor({
+      vm = new Constructor({
         propsData: {
           disabled: true
         }
@@ -37,8 +40,7 @@ describe('Input', () => {
     })
 
     it('could accept readonly', () => {
-      const Constructor = Vue.extend(Input)
-      const vm = new Constructor({
+      vm = new Constructor({
         propsData: {
           readonly: true
         }
@@ -49,8 +51,7 @@ describe('Input', () => {
     })
 
     it('could accept error', () => {
-      const Constructor = Vue.extend(Input)
-      const vm = new Constructor({
+      vm = new Constructor({
         propsData: {
           error: 'You are wrong'
         }
@@ -63,8 +64,47 @@ describe('Input', () => {
     })
   })
 
-  describe('Events', () => {
+  describe('events', () => {
+    const Constructor = Vue.extend(Input)
+    let vm
+    afterEach(() => {
+      vm.$destroy()
+    })
     it('supports change event', () => {
+      vm = new Constructor({}).$mount()
+      const callback = sinon.fake()
+      vm.$on('change', callback)
+      let event = new Event('change')
+      let inputElement = vm.$el.querySelector('input')
+      inputElement.dispatchEvent(event)
+      expect(callback).to.have.been.calledWith(event)
+    })
+    it('supports input event', () => {
+      vm = new Constructor({}).$mount()
+      const callback = sinon.fake()
+      vm.$on('input', callback)
+      let event = new Event('input')
+      let inputElement = vm.$el.querySelector('input')
+      inputElement.dispatchEvent(event)
+      expect(callback).to.have.been.calledWith(event)
+    })
+    it('supports focus event', () => {
+      vm = new Constructor({}).$mount()
+      const callback = sinon.fake()
+      vm.$on('focus', callback)
+      let event = new Event('focus')
+      let inputElement = vm.$el.querySelector('input')
+      inputElement.dispatchEvent(event)
+      expect(callback).to.have.been.calledWith(event)
+    })
+    it('supports blur event', () => {
+      vm = new Constructor({}).$mount()
+      const callback = sinon.fake()
+      vm.$on('blur', callback)
+      let event = new Event('blur')
+      let inputElement = vm.$el.querySelector('input')
+      inputElement.dispatchEvent(event)
+      expect(callback).to.have.been.calledWith(event)
     })
   })
 })
