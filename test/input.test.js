@@ -17,6 +17,7 @@ describe('Input', () => {
     afterEach(() => {
       vm.$destroy()
     })
+
     it('could accept value', () => {
       vm = new Constructor({
         propsData: {
@@ -70,6 +71,7 @@ describe('Input', () => {
     afterEach(() => {
       vm.$destroy()
     })
+
     it('supports change/input/focus/blur event', () => {
       ['change', 'input', 'focus', 'blur'].forEach((eventName) => {
         vm = new Constructor({}).$mount()
