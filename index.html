@@ -37,79 +37,102 @@
       margin: 20px;
     }
   </style>
+  <style>
+    .demo {
+      background: #ddd;
+      border: 1px solid #666;
+      height: 100px;
+    }
+  </style>
 </head>
 <body>
   <div id="app">
-    <div style="border: 1px solid black">
-      <g-row gutter="20">
-        <g-col span="2"
-               :phone="{span: 24}"
-               :ipad="{span: 8}"
-               :narrow-pc="{span: 4}"
-               :wide-pc="{span: 1}"
-        >2</g-col>
-        <g-col span="22"
-               :phone="{span: 24}"
-               :ipad="{span: 16}"
-               :narrow-pc="{span: 20}"
-               :wide-pc="{span: 23}"
-        >20</g-col>
-      </g-row>
-      <g-row gutter="20">
-        <g-col span="4">4</g-col>
-        <g-col span="20">20</g-col>
-      </g-row>
-      <g-row gutter="20">
-        <g-col span="4">4</g-col>
-        <g-col span="18" offset="2">18</g-col>
-      </g-row>
-      <g-row gutter="20">
-        <g-col span="4">4</g-col>
-        <g-col span="8" offset="2">8</g-col>
-        <g-col span="8" offset="2">8</g-col>
-      </g-row>
-      <g-row gutter="20">
-        <g-col span="4">4</g-col>
-        <g-col span="4" offset="6">4</g-col>
-        <g-col span="8" offset="2">8</g-col>
-      </g-row>
-    </div>
-    <hr>
-    <div class="box">
-      <g-input value="Sarah"></g-input>
-      <g-input value="Disabled" disabled></g-input>
-      <g-input value="Read Only" readonly></g-input>
-    </div>
-    <div class="box">
-      <g-input value="A" error="Last name could not be less than 2 characters"></g-input>
-    </div>
-    <div class="box">
-      <g-input value="A" @change="inputChange"></g-input>
-    </div>
-    <div class="box">
-      <g-input v-model="message"></g-input>
-      <p>{{ message }}</p>
-      <button @click="message += 1">+1</button>
-    </div>
-    <div class="box">
-      <g-button>
-        Button
-      </g-button>
-      <g-button icon="settings" :loading="loading2" @click="loading2 = !loading2">
-        Button
-      </g-button>
-      <g-button icon="settings" icon-position="right" :loading="loading3" @click="loading3 = !loading3">
-        Button
-      </g-button>
-      <g-button :loading="loading1" @click="loading1 = !loading1">
-        Button
-      </g-button>
-      <g-button-group>
-        <g-button icon="left">Last Page</g-button>
-        <g-button>More</g-button>
-        <g-button icon="right" icon-position="right">Next Page</g-button>
-      </g-button-group>
-    </div>
+    <g-row>
+      <g-col span="24" :narrow-pc="{span: 8}">
+        <div class="demo"></div>
+      </g-col>
+      <g-col span="24" :narrow-pc="{span: 8}">
+        <div class="demo"></div>
+      </g-col>
+      <g-col span="24" :narrow-pc="{span: 8}">
+        <div class="demo"></div>
+      </g-col>
+      <g-col span="24" :narrow-pc="{span: 8}">
+        <div class="demo"></div>
+      </g-col>
+      <g-col span="24" :narrow-pc="{span: 8}">
+        <div class="demo"></div>
+      </g-col>
+      <g-col span="24" :narrow-pc="{span: 8}">
+        <div class="demo"></div>
+      </g-col>
+    </g-row>
+<!--    <div style="border: 1px solid black">-->
+<!--      <g-row gutter="20">-->
+<!--        <g-col span="24"-->
+<!--               :pc="{span: 2}"-->
+<!--               :wide-pc="{span: 1}"-->
+<!--        >2</g-col>-->
+<!--        <g-col span="24"-->
+<!--               :pc="{span: 22}"-->
+<!--               :wide-pc="{span: 23}"-->
+<!--        >20</g-col>-->
+<!--      </g-row>-->
+<!--      <g-row gutter="20">-->
+<!--        <g-col span="4">4</g-col>-->
+<!--        <g-col span="20">20</g-col>-->
+<!--      </g-row>-->
+<!--      <g-row gutter="20">-->
+<!--        <g-col span="4">4</g-col>-->
+<!--        <g-col span="18" offset="2">18</g-col>-->
+<!--      </g-row>-->
+<!--      <g-row gutter="20">-->
+<!--        <g-col span="4">4</g-col>-->
+<!--        <g-col span="8" offset="2">8</g-col>-->
+<!--        <g-col span="8" offset="2">8</g-col>-->
+<!--      </g-row>-->
+<!--      <g-row gutter="20">-->
+<!--        <g-col span="4">4</g-col>-->
+<!--        <g-col span="4" offset="6">4</g-col>-->
+<!--        <g-col span="8" offset="2">8</g-col>-->
+<!--      </g-row>-->
+<!--    </div>-->
+<!--    <hr>-->
+<!--    <div class="box">-->
+<!--      <g-input value="Sarah"></g-input>-->
+<!--      <g-input value="Disabled" disabled></g-input>-->
+<!--      <g-input value="Read Only" readonly></g-input>-->
+<!--    </div>-->
+<!--    <div class="box">-->
+<!--      <g-input value="A" error="Last name could not be less than 2 characters"></g-input>-->
+<!--    </div>-->
+<!--    <div class="box">-->
+<!--      <g-input value="A" @change="inputChange"></g-input>-->
+<!--    </div>-->
+<!--    <div class="box">-->
+<!--      <g-input v-model="message"></g-input>-->
+<!--      <p>{{ message }}</p>-->
+<!--      <button @click="message += 1">+1</button>-->
+<!--    </div>-->
+<!--    <div class="box">-->
+<!--      <g-button>-->
+<!--        Button-->
+<!--      </g-button>-->
+<!--      <g-button icon="settings" :loading="loading2" @click="loading2 = !loading2">-->
+<!--        Button-->
+<!--      </g-button>-->
+<!--      <g-button icon="settings" icon-position="right" :loading="loading3" @click="loading3 = !loading3">-->
+<!--        Button-->
+<!--      </g-button>-->
+<!--      <g-button :loading="loading1" @click="loading1 = !loading1">-->
+<!--        Button-->
+<!--      </g-button>-->
+<!--      <g-button-group>-->
+<!--        <g-button icon="left">Last Page</g-button>-->
+<!--        <g-button>More</g-button>-->
+<!--        <g-button icon="right" icon-position="right">Next Page</g-button>-->
+<!--      </g-button-group>-->
+<!--    </div>-->
   </div>
   <script src="./src/app.js"></script>
 </body>
