@@ -47,7 +47,7 @@ describe('Col', () => {
     const Constructor = Vue.extend(Col)
     const vm = new Constructor({
       propsData: {
-        pc: {span: 1, offset: 2}
+        pc: {span: 2, offset: 3}
       }
     }).$mount(div)
     const element = vm.$el
