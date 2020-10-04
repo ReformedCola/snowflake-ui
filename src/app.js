@@ -35,9 +35,21 @@ new Vue({
     loading3: false,
     message: 'hi',
   },
+  created() {
+    this.$toast('Text', {
+      enableHtml: false,
+    })
+  },
   methods: {
     showToast() {
-      this.$toast('I am message')
+      this.$toast('I am message', {
+        closeButton: {
+          text: 'Ok',
+          callback() {
+            console.log('User says Ok')
+          }
+        }
+      })
     }
   }
 })
