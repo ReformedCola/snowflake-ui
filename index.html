@@ -36,16 +36,35 @@
       border: 1px solid #666;
       min-height: 100px;
     }
+    
+    .sider {
+      background: #333;
+      width: 150px;
+    }
+
+    .sider.slide-enter, .sider.slide-leave-to {
+      margin-left: -150px !important;
+    }
+
+    .header {
+      background: #999;
+      height: 100px;
+    }
+    
+    .footer {
+      background: #ccc;
+      height: 50px;
+    }
   </style>
 </head>
 <body>
   <div id="app">
     <g-layout style="height: 100vh;">
-      <g-sider class="demo">Sider</g-sider>
+      <g-sider>Sider</g-sider>
       <g-layout>
-        <g-header class="demo">Header</g-header>
-        <g-content class="demo">Content</g-content>
-        <g-footer class="demo">Footer</g-footer>
+        <g-header>Header</g-header>
+        <g-content>Content</g-content>
+        <g-footer>Footer</g-footer>
       </g-layout>
     </g-layout>
     <!--    <g-row>-->
