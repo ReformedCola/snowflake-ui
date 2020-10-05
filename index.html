@@ -34,9 +34,34 @@
 </head>
 <body>
   <div id="app">
-    <button @click="showToast1">Top</button>
-    <button @click="showToast2">Middle</button>
-    <button @click="showToast3">Bottom</button>
+    <g-tabs :selected.sync="selectedTab">
+      <g-tabs-head>
+        <template slot="actions">
+          <button>Settings</button>
+        </template>
+        <g-tabs-item name="lol">
+          <g-icon name="settings"></g-icon>
+          League of Legends
+        </g-tabs-item>
+        <g-tabs-item name="tos" disabled>
+          Tree of Savior
+        </g-tabs-item>
+        <g-tabs-item name="tft">
+          Teamfight Tactics
+        </g-tabs-item>
+      </g-tabs-head>
+      <g-tabs-body>
+        <g-tabs-pane name="lol">
+          LOL News
+        </g-tabs-pane>
+        <g-tabs-pane name="tos">
+          TOS News
+        </g-tabs-pane>
+        <g-tabs-pane name="tft">
+          TFT News
+        </g-tabs-pane>
+      </g-tabs-body>
+    </g-tabs>
   </div>
   <script src="./src/app.js"></script>
 </body>
