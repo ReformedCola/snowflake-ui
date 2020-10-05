@@ -40,7 +40,7 @@ new Vue({
   methods: {
     showToast() {
       this.$toast('Pay for the item', {
-        position: 'middle',
+        position: 'bottom',
         enableHtml: false,
         closeButton: {
           text: 'Paid',
