@@ -36,8 +36,17 @@ new Vue({
     message: 'hi',
   },
   created() {
-    this.$toast('Text', {
+    this.$toast('Pay for the item', {
+      position: 'middle',
       enableHtml: false,
+      closeButton: {
+        text: 'Paid',
+        callback () {
+          console.log('User says paid')
+        }
+      },
+      autoClose: false,
+      autoCloseDelay: 3
     })
   },
   methods: {
