@@ -7,7 +7,10 @@
 
 <script>
   export default {
-    name: 'SnowTabsHead'
+    name: 'SnowTabsHead',
+    inject: ['eventBus'],
+    created() {
+    }
   }
 </script>
 

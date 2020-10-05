@@ -6,7 +6,13 @@
 
 <script>
   export default {
-    name: 'SnowTabsPane'
+    name: 'SnowTabsPane',
+    inject: ['eventBus'],
+    created() {
+      this.eventBus.$on('update:selected', (name) => {
+        console.log(name)
+      })
+    }
   }
 </script>
 
