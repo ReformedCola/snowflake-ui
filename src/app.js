@@ -57,8 +57,7 @@ new Vue({
             console.log('User says paid')
           }
         },
-        autoClose: false,
-        autoCloseDelay: 3
+        autoClose: 3
       })
     }
   }
