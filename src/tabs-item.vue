@@ -56,6 +56,10 @@
     display: flex;
     align-items: center;
 
+    &:hover {
+      color: lighten($blue, 10%);
+    }
+
     &.active {
       color: $blue;
       font-weight: bold;
@@ -63,6 +67,7 @@
 
     &.disabled {
       color: $disabled-text-color;
+      cursor: not-allowed;
     }
   }
 </style>
