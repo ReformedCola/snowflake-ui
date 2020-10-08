@@ -33,6 +33,10 @@
       }
     },
     mounted() {
+      if (this.$children.length === 0) {
+        console && console.warn &&
+        console.warn (`Tab's child components should be tabs-head and tabs-body, but you didn't write any child component`)
+      }
       this.$children.forEach((vm) => {
         if (vm.$options.name === 'SnowTabsHead') {
           vm.$children.forEach((childVm) => {
