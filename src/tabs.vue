@@ -6,6 +6,7 @@
 
 <script>
   import Vue from 'vue'
+
   export default {
     name: 'SnowTabs',
     props: {
@@ -31,13 +32,14 @@
         eventBus: this.eventBus
       }
     },
-    created() {
+    mounted() {
       // this.$emit('update:selected', 'xxx')
+      this.eventBus.$emit('update:selected', this.selected)
     }
   }
 </script>
 
-<style>
+<style lang="scss" scoped>
   .tabs {
 
   }

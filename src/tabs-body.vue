@@ -13,7 +13,7 @@
   }
 </script>
 
-<style>
+<style lang="scss" scoped>
   .tabs-body {
 
   }
