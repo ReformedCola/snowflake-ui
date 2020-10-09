@@ -56,18 +56,5 @@ new Vue({
     showToast3() {
       this.showToast('bottom')
     },
-    showToast(position) {
-      this.$toast('Pay for the item', {
-        position,
-        enableHtml: false,
-        closeButton: {
-          text: 'Paid',
-          callback () {
-            console.log('User says paid')
-          }
-        },
-        autoClose: 3
-      })
-    }
   }
 })
