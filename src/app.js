@@ -50,8 +50,5 @@ new Vue({
     showToast1() {
       this.showToast('top')
     },
-    showToast2() {
-      this.showToast('middle')
-    },
   }
 })
