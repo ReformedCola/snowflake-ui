@@ -47,8 +47,5 @@ new Vue({
   created() {
   },
   methods: {
-    showToast1() {
-      this.showToast('top')
-    },
   }
 })
