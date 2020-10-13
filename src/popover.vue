@@ -3,7 +3,7 @@
     <div ref="contentWrapper" class="content-wrapper"
          :class="{[`position-${position}`]: true}"
          v-if="visible">
-      <slot name="content"></slot>
+      <slot name="content" :close="close"></slot>
     </div>
     <span ref="triggerWrapper" style="display: inline-block;">
       <slot></slot>
@@ -65,7 +65,7 @@
         validator(value) {
           return ['click', 'hover'].indexOf(value) >= 0
         }
-      }
+      },
     },
     methods: {
       positionContent() {

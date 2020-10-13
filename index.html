@@ -36,8 +36,8 @@
   <div id="app" style="padding-left: 100px;">
     <div style="overflow: hidden; padding-top: 150px; padding-bottom: 40px;">
       <g-popover position="top">
-        <template slot="content">
-          <div>Popover Content</div>
+        <template slot="content" slot-scope="{close}">
+          <g-button @click="close">Close</g-button>
         </template>
         <g-button>Click me !!</g-button>
       </g-popover>
