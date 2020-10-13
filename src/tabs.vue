@@ -32,20 +32,28 @@
         eventBus: this.eventBus
       }
     },
-    mounted() {
-      if (this.$children.length === 0) {
-        console && console.warn &&
-        console.warn (`Tab's child components should be tabs-head and tabs-body, but you didn't write any child component`)
-      }
-      this.$children.forEach((vm) => {
-        if (vm.$options.name === 'SnowTabsHead') {
-          vm.$children.forEach((childVm) => {
-            if (childVm.$options.name === 'SnowTabsItem' && childVm.name === this.selected) {
-              this.eventBus.$emit('update:selected', this.selected, childVm)
-            }
-          })
+    methods: {
+      checkChildren() {
+        if (this.$children.length === 0) {
+          console && console.warn &&
+          console.warn(`Tab's child components should be tabs-head and tabs-body, but you didn't write any child component`)
         }
-      })
+      },
+      selectTab() {
+        this.$children.forEach((vm) => {
+          if (vm.$options.name === 'SnowTabsHead') {
+            vm.$children.forEach((childVm) => {
+              if (childVm.$options.name === 'SnowTabsItem' && childVm.name === this.selected) {
+                this.eventBus.$emit('update:selected', this.selected, childVm)
+              }
+            })
+          }
+        })
+      }
+    },
+    mounted() {
+      this.checkChildren()
+      this.selectTab()
     }
   }
 </script>
