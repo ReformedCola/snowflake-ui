@@ -33,8 +33,8 @@
   </style>
 </head>
 <body>
-  <div id="app">
-    <div style="overflow: hidden; padding: 50px;">
+  <div id="app" style="padding-left: 100px;">
+    <div style="overflow: hidden; padding-top: 150px; padding-bottom: 40px;">
       <g-popover position="top">
         <template slot="content">
           <div>Popover Content</div>
@@ -54,6 +54,32 @@
         <g-button>Click me ??</g-button>
       </g-popover>
       <g-popover position="right">
+        <template slot="content">
+          <div>Popover Content</div>
+        </template>
+        <g-button>Click me ??</g-button>
+      </g-popover>
+    </div>
+    <div style="overflow: hidden; padding-bottom: 150px;">
+      <g-popover position="top" trigger="hover">
+        <template slot="content">
+          <div>Popover Content</div>
+        </template>
+        <g-button>Click me !!</g-button>
+      </g-popover>
+      <g-popover position="bottom" trigger="hover">
+        <template slot="content">
+          <div>Popover Content</div>
+        </template>
+        <g-button>Click me ??</g-button>
+      </g-popover>
+      <g-popover position="left" trigger="hover">
+        <template slot="content">
+          <div>Popover Content</div>
+        </template>
+        <g-button>Click me ??</g-button>
+      </g-popover>
+      <g-popover position="right" trigger="hover">
         <template slot="content">
           <div>Popover Content</div>
         </template>
