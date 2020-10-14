@@ -35,4 +35,31 @@ describe('Popover', () => {
       })
     })
   })
+
+  xit('could accept trigger', (done) => {
+    Vue.component('g-popover', Popover)
+    const div = document.createElement('div')
+    document.body.appendChild(div)
+    div.innerHTML = `
+      <g-popover trigger="hover" ref="a"> 
+        <template slot="content">
+          Popover Content
+        </template>
+        <button>Click me !!</button>
+      </g-popover>
+    `
+    const vm = new Vue({
+      el: div
+    })
+
+    let event = new Event('mouseenter')
+    vm.$el.dispatchEvent(event)
+    vm.$nextTick(() => {
+      vm.$nextTick(() => {
+        const {contentWrapper} = vm.$refs.a.$refs
+        expect (contentWrapper).to.exist
+        done()
+      })
+    })
+  })
 })
