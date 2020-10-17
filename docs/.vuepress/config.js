@@ -1,4 +1,5 @@
 module.exports = {
+  base: '/snowflake-ui/',
   title: 'Snowflake UI',
   description: 'A useful UI framework',
   themeConfig: {

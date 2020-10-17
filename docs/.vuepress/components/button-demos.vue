@@ -5,9 +5,7 @@
     <g-button :loading="true">Default Button</g-button>
     <g-button disabled>Default Button</g-button>
 
-    <pre>
-      <code>{{content}}</code>
-    </pre>
+    <pre><code>{{content}}</code></pre>
   </div>
 </template>
 
@@ -25,7 +23,7 @@
           <g-button icon="settings">Default Button</g-button>
           <g-button :loading="true">Default Button</g-button>
           <g-button disabled>Default Button</g-button>
-      `
+      `.replace(/\t+| +/g, '').trim()
       }
     }
   }
