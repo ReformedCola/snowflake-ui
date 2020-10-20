@@ -10,7 +10,7 @@ How to use
 <button-demos></button-demos>
 </ClientOnly>
 
-```vue
+```
 <g-button>Default Button</g-button>
 <g-button icon="settings">Default Button</g-button>
 <g-button :loading="true">Default Button</g-button>
