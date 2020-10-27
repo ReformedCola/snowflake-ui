@@ -1,6 +1,6 @@
 <template>
   <div>
-    <g-button>Default Button</g-button>
+    <g-button>Defaulted Button</g-button>
     <g-button icon="settings">Default Button</g-button>
     <g-button :loading="true">Default Button</g-button>
     <g-button disabled>Default Button</g-button>
