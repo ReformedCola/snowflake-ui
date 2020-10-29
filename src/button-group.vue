@@ -1,5 +1,5 @@
 <template>
-  <div class="g-button-group">
+  <div class="s-button-group">
     <slot></slot>
   </div>
 </template>
@@ -10,18 +10,18 @@
       for (let node of this.$el.children) {
         let name = node.nodeName.toLowerCase()
         if (name !== 'button') {
-          console.warn(`All child elements of g-button-group should be g-button, but you used ${name}`)
+          console.warn(`All child elements of s-button-group should be s-button, but you used ${name}`)
         }
       }
     }
   }
 </script>
 <style lang="scss" scoped>
-  .g-button-group {
+  .s-button-group {
     display: inline-flex;
     vertical-align: middle;
 
-    > .g-button {
+    > .s-button {
       border-radius: 0;
       &:not(:first-child) {
         margin-left: -1px;

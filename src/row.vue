@@ -12,6 +12,7 @@
       },
       align: {
         type: String,
+        default: 'left',
         validator(value) {
           return ['left', 'right', 'center'].indexOf(value) >= 0
         }

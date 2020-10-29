@@ -6,11 +6,11 @@ import TabsBody from '../src/tabs-body'
 import TabsItem from '../src/tabs-item'
 import TabsPane from '../src/tabs-pane'
 
-Vue.component('g-tabs', Tabs)
-Vue.component('g-tabs-head', TabsHead)
-Vue.component('g-tabs-body', TabsBody)
-Vue.component('g-tabs-item', TabsItem)
-Vue.component('g-tabs-pane', TabsPane)
+Vue.component('s-tabs', Tabs)
+Vue.component('s-tabs-head', TabsHead)
+Vue.component('s-tabs-body', TabsBody)
+Vue.component('s-tabs-item', TabsItem)
+Vue.component('s-tabs-pane', TabsPane)
 
 Vue.config.productionTip = false
 Vue.config.devtools = false
@@ -25,18 +25,18 @@ describe('Tabs', () => {
     const div = document.createElement('div')
     document.body.appendChild(div)
     div.innerHTML = `
-      <g-tabs selected="tos">
-        <g-tabs-head>
-          <g-tabs-item name="lol"> League of Legends </g-tabs-item>
-          <g-tabs-item name="tos"> Tree of Savior </g-tabs-item>
-          <g-tabs-item name="tft"> Teamfight Tactics </g-tabs-item>
-        </g-tabs-head>
-        <g-tabs-body>
-          <g-tabs-pane name="lol"> LOL News </g-tabs-pane>
-          <g-tabs-pane name="tos"> TOS News </g-tabs-pane>
-          <g-tabs-pane name="tft"> TFT News </g-tabs-pane>
-        </g-tabs-body>
-      </g-tabs>
+      <s-tabs selected="tos">
+        <s-tabs-head>
+          <s-tabs-item name="lol"> League of Legends </s-tabs-item>
+          <s-tabs-item name="tos"> Tree of Savior </s-tabs-item>
+          <s-tabs-item name="tft"> Teamfight Tactics </s-tabs-item>
+        </s-tabs-head>
+        <s-tabs-body>
+          <s-tabs-pane name="lol"> LOL News </s-tabs-pane>
+          <s-tabs-pane name="tos"> TOS News </s-tabs-pane>
+          <s-tabs-pane name="tft"> TFT News </s-tabs-pane>
+        </s-tabs-body>
+      </s-tabs>
     `
     const vm = new Vue({
       el: div

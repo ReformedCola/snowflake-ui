@@ -13,15 +13,15 @@ describe('Row', () => {
   })
 
   it('should accept gutter property', (done) => {
-    Vue.component('g-row', Row)
-    Vue.component('g-col', Col)
+    Vue.component('s-row', Row)
+    Vue.component('s-col', Col)
     const div = document.createElement('div')
     document.body.appendChild(div)
     div.innerHTML = `
-      <g-row gutter="20">
-        <g-col span="12"></g-col>
-        <g-col span="12"></g-col>
-      </g-row>
+      <s-row gutter="20">
+        <s-col span="12"></s-col>
+        <s-col span="12"></s-col>
+      </s-row>
     `
     const vm = new Vue({
       el: div

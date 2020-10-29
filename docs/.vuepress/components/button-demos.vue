@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <g-button>Default Button</g-button>
-    <g-button icon="settings">Default Button</g-button>
-    <g-button :loading="true">Default Button</g-button>
-    <g-button disabled>Default Button</g-button>
-
-    <pre><code>{{content}}</code></pre>
+  <div class="s-button">
+    <div class="s-button-wrapper">
+      <s-button>Default Button</s-button>
+      <s-button icon="settings">Default Button</s-button>
+      <s-button :loading="true">Default Button</s-button>
+      <s-button disabled>Default Button</s-button>
+    </div>
   </div>
 </template>
 
@@ -14,18 +14,16 @@
 
   export default {
     components: {
-      'g-button': Button
+      's-button': Button
     },
-    data() {
-      return {
-        content: `
-          <g-button>Default Button</g-button>
-          <g-button icon="settings">Default Button</g-button>
-          <g-button :loading="true">Default Button</g-button>
-          <g-button disabled>Default Button</g-button>
-      `.replace(/\t+| +/g, '').trim()
-      }
-    }
   }
 </script>
+
+<style scoped lang="scss">
+  .s-button {
+    &-wrapper {
+      padding-top: 10px;
+    }
+  }
+</style>
 

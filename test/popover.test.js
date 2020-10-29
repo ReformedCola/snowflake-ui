@@ -12,16 +12,16 @@ describe('Popover', () => {
   })
 
   it('could accept position', (done) => {
-    Vue.component('g-popover', Popover)
+    Vue.component('s-popover', Popover)
     const div = document.createElement('div')
     document.body.appendChild(div)
     div.innerHTML = `
-      <g-popover position="bottom" ref="a"> 
+      <s-popover position="bottom" ref="a"> 
         <template slot="content">
           Popover Content
         </template>
         <button>Click me !!</button>
-      </g-popover>
+      </s-popover>
     `
     const vm = new Vue({
       el: div
@@ -37,16 +37,16 @@ describe('Popover', () => {
   })
 
   xit('could accept trigger', (done) => {
-    Vue.component('g-popover', Popover)
+    Vue.component('s-popover', Popover)
     const div = document.createElement('div')
     document.body.appendChild(div)
     div.innerHTML = `
-      <g-popover trigger="hover" ref="a"> 
+      <s-popover trigger="hover" ref="a"> 
         <template slot="content">
           Popover Content
         </template>
         <button>Click me !!</button>
-      </g-popover>
+      </s-popover>
     `
     const vm = new Vue({
       el: div

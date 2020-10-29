@@ -46,8 +46,8 @@ I hope this is useful to you. 😉
    export default {
      name: 'app',
      components: {
-       'g-button': Button,
-       'g-icon': Icon
+       's-button': Button,
+       's-icon': Icon
      }
    }
    ```

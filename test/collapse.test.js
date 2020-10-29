@@ -14,16 +14,16 @@ describe('Collapse', () => {
 
   it('could accept selected', (done) => {
 
-    Vue.component('g-collapse', Collapse)
-    Vue.component('g-collapse-item', CollapseItem)
+    Vue.component('s-collapse', Collapse)
+    Vue.component('s-collapse-item', CollapseItem)
     const div = document.createElement('div')
     document.body.appendChild(div)
     div.innerHTML = `
-        <g-collapse :selected="xxx">
-          <g-collapse-item title="title1" name="1"><span id="content-1">1</span></g-collapse-item>
-          <g-collapse-item title="title2" name="2"><span id="content-2">2</span></g-collapse-item>
-          <g-collapse-item title="title3" name="3"><span id="content-3">3</span></g-collapse-item>
-        </g-collapse>
+        <s-collapse :selected="xxx">
+          <s-collapse-item title="title1" name="1"><span id="content-1">1</span></s-collapse-item>
+          <s-collapse-item title="title2" name="2"><span id="content-2">2</span></s-collapse-item>
+          <s-collapse-item title="title3" name="3"><span id="content-3">3</span></s-collapse-item>
+        </s-collapse>
     `
     const vm = new Vue({
       el: div,
@@ -41,16 +41,16 @@ describe('Collapse', () => {
 
   it('could accept single', (done) => {
 
-    Vue.component('g-collapse', Collapse)
-    Vue.component('g-collapse-item', CollapseItem)
+    Vue.component('s-collapse', Collapse)
+    Vue.component('s-collapse-item', CollapseItem)
     const div = document.createElement('div')
     document.body.appendChild(div)
     div.innerHTML = `
-        <g-collapse :selected.sync="xxx" single>
-          <g-collapse-item title="title1" name="1"><span id="content-1">1</span></g-collapse-item>
-          <g-collapse-item title="title2" name="2"><span id="content-2">2</span></g-collapse-item>
-          <g-collapse-item title="title3" name="3"><span id="content-3">3</span></g-collapse-item>
-        </g-collapse>
+        <s-collapse :selected.sync="xxx" single>
+          <s-collapse-item title="title1" name="1"><span id="content-1">1</span></s-collapse-item>
+          <s-collapse-item title="title2" name="2"><span id="content-2">2</span></s-collapse-item>
+          <s-collapse-item title="title3" name="3"><span id="content-3">3</span></s-collapse-item>
+        </s-collapse>
     `
     const vm = new Vue({
       el: div,
@@ -69,16 +69,16 @@ describe('Collapse', () => {
   })
 
   it('will trigger update:selected event', (done) => {
-    Vue.component('g-collapse', Collapse)
-    Vue.component('g-collapse-item', CollapseItem)
+    Vue.component('s-collapse', Collapse)
+    Vue.component('s-collapse-item', CollapseItem)
     const div = document.createElement('div')
     document.body.appendChild(div)
     div.innerHTML = `
-        <g-collapse :selected="xxx" @update:selected="onSelect">
-          <g-collapse-item title="title1" name="1"><span id="content-1">1</span></g-collapse-item>
-          <g-collapse-item title="title2" name="2"><span id="content-2">2</span></g-collapse-item>
-          <g-collapse-item title="title3" name="3"><span id="content-3">3</span></g-collapse-item>
-        </g-collapse>
+        <s-collapse :selected="xxx" @update:selected="onSelect">
+          <s-collapse-item title="title1" name="1"><span id="content-1">1</span></s-collapse-item>
+          <s-collapse-item title="title2" name="2"><span id="content-2">2</span></s-collapse-item>
+          <s-collapse-item title="title3" name="3"><span id="content-3">3</span></s-collapse-item>
+        </s-collapse>
     `
     const callback = sinon.fake()
     const vm = new Vue({

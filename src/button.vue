@@ -1,9 +1,9 @@
 <template>
-  <button class="g-button" :class="{[`icon-${iconPosition}`]: true}"
+  <button class="s-button" :class="{[`icon-${iconPosition}`]: true}"
           @click="$emit('click')">
-    <g-icon class="icon" v-if="icon && !loading" :name="icon"></g-icon>
-    <g-icon class="loading icon" v-if="loading" name="loading"></g-icon>
-    <div class="g-button-content">
+    <s-icon class="icon" v-if="icon && !loading" :name="icon"></s-icon>
+    <s-icon class="loading icon" v-if="loading" name="loading"></s-icon>
+    <div class="s-button-content">
       <slot></slot>
     </div>
   </button>
@@ -14,7 +14,7 @@
   export default {
     name: 'SnowButton',
     components: {
-      'g-icon': Icon
+      's-icon': Icon
     },
     // props: ['icon', 'iconPosition']
     props: {
@@ -52,7 +52,7 @@
     }
   }
 
-  .g-button {
+  .s-button {
     font-size: $font-size;
     height: $button-height;
     padding: 0 0.6em;
@@ -63,6 +63,10 @@
     justify-content: center;
     align-items: center;
     vertical-align: middle;
+
+    &:disabled {
+      cursor: not-allowed;
+    }
 
     &:hover {
       border-color: $border-color-hover;
@@ -81,7 +85,7 @@
       margin-right: .3em;
     }
 
-    > .g-button-content {
+    > .s-button-content {
       order: 2;
     }
 
@@ -92,7 +96,7 @@
         margin-left: .3em;
       }
 
-      > .g-button-content {
+      > .s-button-content {
         order: 1;
       }
     }
