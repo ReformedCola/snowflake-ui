@@ -2,18 +2,22 @@
   <transition name="slide">
     <div class="sider" v-if="visible">
       <slot></slot>
-      <button @click="visible=false">Close</button>
+      <s-button @click="visible=false">Close</s-button>
     </div>
   </transition>
 </template>
 
 <script>
+  import Button from './button'
   export default {
     name: 'SnowSider',
     data() {
       return {
         visible: true
       }
+    },
+    components: {
+      's-button': Button
     }
   }
 </script>
@@ -29,9 +33,9 @@
     }
   }
   .slide-enter-active, .slide-leave-active {
-    transition: all .5s;
+    transition: width .3s
   }
   .slide-enter, .slide-leave-to {
-    margin-left: -200px;
+    width: 0;
   }
 </style>

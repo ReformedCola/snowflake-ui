@@ -26,6 +26,7 @@ module.exports = {
           '/components/button',
           '/components/input',
           '/components/grid',
+          '/components/layout',
         ]
       }
     ]
