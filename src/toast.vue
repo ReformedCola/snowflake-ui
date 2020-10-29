@@ -121,6 +121,7 @@
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 999;
     $animation-duration: 300ms;
 
     &.position-top {
