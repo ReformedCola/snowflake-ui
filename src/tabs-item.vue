@@ -51,7 +51,7 @@
 </script>
 
 <style lang="scss" scoped>
-  $blue: blue;
+  $green: #42B983;
   $disabled-text-color: grey;
   .tabs-item {
     flex-shrink: 0;
@@ -62,11 +62,11 @@
     align-items: center;
 
     &:hover {
-      color: lighten($blue, 10%);
+      color: lighten($green, 10%);
     }
 
     &.active {
-      color: $blue;
+      color: $green;
       font-weight: bold;
     }
 

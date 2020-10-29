@@ -1,5 +1,5 @@
 <template>
-  <div class="tabs-head">
+  <div class="tabs-head" ref="head">
     <slot></slot>
     <div class="line" ref="line"></div>
     <div class="actions-wrapper">
@@ -15,9 +15,10 @@
     mounted() {
       this.eventBus.$on('update:selected', (item, vm) => {
         this.$nextTick(() => {
-          let {width, left} = vm.$el.getBoundingClientRect()
+          let {left: thisLeft} = this.$refs.head.getBoundingClientRect()
+          let {width, left: vmLeft} = vm.$el.getBoundingClientRect()
           this.$refs.line.style.width = `${width}px`
-          this.$refs.line.style.left = `${left}px`
+          this.$refs.line.style.left = `${vmLeft - thisLeft}px`
         })
       })
     }
@@ -26,7 +27,7 @@
 
 <style lang="scss" scoped>
   $tab-height: 40px;
-  $blue: blue;
+  $green: #42B983;
   $border-color: #ddd;
   .tabs-head {
     display: flex;
@@ -38,8 +39,8 @@
     > .line {
       position: absolute;
       bottom: 0;
-      border-bottom: 1px solid $blue;
-      transition: all 350ms;
+      border-bottom: 2px solid $green;
+      transition: all 300ms;
     }
 
     > .actions-wrapper {
