@@ -1,7 +1,7 @@
 module.exports = {
   base: '/snowflake-ui/',
   title: 'Snowflake UI',
-  description: 'A useful UI framework',
+  description: 'A great UI library',
   themeConfig: {
     // displayAllHeaders: true,
     nav: [
@@ -30,6 +30,7 @@ module.exports = {
           '/components/tabs',
           '/components/popover',
           '/components/toast',
+          '/components/collapse',
         ]
       }
     ]
