@@ -6,9 +6,11 @@
 
 ## Introduction
 
-This is a UI Library that I made while I was learning Vue 2.
+Snowflake is a simple and useful UI Library that I made while I was learning Vue 2 and inspired by Ant Design and Element.
 
-I hope this is useful to you. 😉
+It provides some useful components, and suitable for PC and mobile.
+ 
+Hope it's useful to you. 😉
 
 ## Start to Use
 
@@ -18,46 +20,37 @@ I hope this is useful to you. 😉
     ```
     *, *::before, *::after {box-sizing: border-box;}
     ```
-    Browsers that are IE 8 or higher version support border-box.
     
-    You may need to set default variables such as colors, font sizes, etc. (Will change to SCSS variables later)
-    ```
-    html {
-      --button-height: 32px;
-      --font-size: 14px;
-      --button-bg: white;
-      --button-active-bg: #eee;
-      --border-radius: 4px;
-      --color: #333;
-      --border-color: #999;
-      --border-color-hover: #666;
-    }
-    ```
-    Browsers that are IE 15 or higher version support styles above.
+    This feature supports IE8+ browsers.
+    
 2. Install snowflake-ui
     ```
    npm i --save snowflake-ui
    ```
 3. Import snowflake-ui
     ```
-   import {Button, ButtonGroup, Icon} from 'snowflake-ui'
+   import {Button} from 'snowflake-ui'
    import 'snowflake-ui/dist/index.css'
    
    export default {
      name: 'app',
      components: {
-       's-button': Button,
-       's-icon': Icon
+       's-button': Button
      }
    }
    ```
 
 ## Documentation
 
-## Questions
+The documentation is developed with [vuepress](https://vuepress.vuejs.org/).
+All usages of components are included in this docs.
+Please check [this](https://horzhiyuan.com/snowflake-ui/) out.
 
-## Changelog
+## Questions & Stay in Touch
 
-## Stay in Touch
+[Shoot me an email](mailto:zhiyuanfw@gmail.com).
 
 ## Contribution
+
+Any contributions will help me to improve this UI library.
+Feel free to join me.
