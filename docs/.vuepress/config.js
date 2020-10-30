@@ -4,6 +4,7 @@ module.exports = {
   description: 'A great UI library',
   themeConfig: {
     // displayAllHeaders: true,
+    logo: '/snowflake.png',
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Docs', link: '/install/' },
